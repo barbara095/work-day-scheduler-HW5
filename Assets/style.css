@@ -1,0 +1,10 @@
+/* Styling for jumbotron */
+.jumbotron {
+    background-color: #fff;
+    color:lightpink;
+    text-align: center;
+}
+.my-4 {
+    border-color: lightpink;
+}
+
