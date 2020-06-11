@@ -8,3 +8,15 @@
     border-color: lightpink;
 }
 
+.table {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.table-bordered .table-bordered {
+    border-color: lightpink;
+    border-style: solid;
+    border-width: 2px;
+}
+
+

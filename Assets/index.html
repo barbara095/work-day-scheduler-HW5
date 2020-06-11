@@ -1,30 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link>
     <link rel="stylesheet" href=./style.css></link>
 
     <title>Work Planner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
 </head>
 
 <body>
     <div class="jumbotron">
         <h1 class="display-4">Welcome to your daily planner!</h1>
         <p class="lead">Let's make your work life easier with this simple daily scheduler.</p>
+        <div class="d-flex" id="current-date-time">
+            <p class="lead" id="title-time">
+                <div class="font-weight-bold lead pl-1" id="dynamic-time"></div>
+            </p>
+        </div>
         <hr class="my-4">
-      </div>
-      
-    <div class ="wrapper"></div>
-        <div class="container"></div>
-            <div class = "calendar">
-          <h2 class = ></h2>
-      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <div class="current-date">
+        <p></p>
+    </div>
+
+    <div class="container"></div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <div class="row">
+                        <th scope="col-3">Time</th>
+                        <div class="row">
+                            <th scope="col-6">First</th>
+                            <div class="row">
+                                <th scope="col-3">Last</th>
+                            </div>
+                        </div>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">9:00am</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                </tr>
+                <tr>
+                    <th scope="row">10:00am</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                </tr>
+                <tr>
+                    <th scope="row">11:00am</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">12:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">1:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">2:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">4:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">5:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">6:00pm</th>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+    </div>
+    </table>
+
+    <script type="text/javascript">
+
+    var time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+            console.log(time);
+            $("<empty-div>").text(time);
+
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+
+
+        $(document).ready(function () {
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script> -->
+
+
 </body>
+
 </html>
