@@ -1,11 +1,11 @@
 /* Styling for jumbotron */
 .jumbotron {
     background-color: #fff;
-    color:rgb(85, 66, 172);
+    color:rgb(167, 137, 201);
     text-align: center;
 }
 .my-4 {
-    border-color: rgb(85, 66, 172);
+    border-color: rgb(167, 137, 201);
 }
 
 .table {
@@ -14,13 +14,18 @@
 }
 
 .table-bordered .table-bordered {
-    border-color: rgb(85, 66, 172);
+    border-color: rgb(167, 137, 201);
     border-style: solid;
     border-width: 2px;
 }
 
 #displayMoment {
     text-align: center;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(90, 89, 89);
+    padding-top: 30px;
+    font-size: 22px;
     margin: 0 auto 0 auto;
 }
 

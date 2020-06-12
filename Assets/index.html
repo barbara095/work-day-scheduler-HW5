@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=./style.css>
     </link>
 
@@ -106,11 +107,13 @@
 
     <script type="text/javascript">
         // Display current date with time
-        var timeEl = moment().format("dddd, MMMM Do YYYY | h:mmA");
-    
-        var timeDiv = document.querySelector("#displayMoment");
-        timeDiv.textContent = timeEl;
-      
+        setInterval(function () {
+            var timeEl = moment().format("dddd, MMMM Do YYYY | h:mm:ss a");
+
+            var timeDiv = document.querySelector("#displayMoment");
+            timeDiv.textContent = timeEl;
+
+        }, 1000);
 
     </script>
 
