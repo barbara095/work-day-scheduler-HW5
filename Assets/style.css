@@ -24,13 +24,16 @@
     font-weight: 600;
     font-family: 'Roboto Condensed', sans-serif;
     color: #fff;
-    padding: 15px;
+    padding: 12px;
     font-size: 22px;
     margin: 0 auto 0 auto;
 }
 
 .d-flex {
-    background-color: rgb(125, 170, 228);
+    background-color: rgb(120, 178, 224);
+    width: 450px;
+    align-items: center;
+    margin: auto;
 }
 
 
