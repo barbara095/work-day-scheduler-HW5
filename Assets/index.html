@@ -21,8 +21,7 @@
         <h1 class="display-4">Welcome to your daily planner!</h1>
         <p class="lead">Let's make your life easier with this simple daily scheduler.</p>
         <div class="d-flex" id="current-date-time">
-            <p class="lead" id="title-time">
-            <div class="font-weight-bold lead pl-1" id="dynamic-time"></div>
+            <div class="font-weight-bold" id="dynamic-time"></div>
             <!-- container for Moment.js output -->
             <div id="displayMoment"></div>
             </p>
@@ -104,6 +103,12 @@
             </tbody>
     </div>
     </table>
+
+    <footer class="footer text-center py-3 bg-dark sticky-footer">
+        <div class="container" id="footer-container">
+            <span class="text-muted">Copyright &copy; 2020 <a class="text-info">Barbara Potiriadis</a></span>
+        </div>
+    </footer>
 
     <script type="text/javascript">
         // Display current date with time

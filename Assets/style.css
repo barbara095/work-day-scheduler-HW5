@@ -1,11 +1,11 @@
 /* Styling for jumbotron */
 .jumbotron {
     background-color: #fff;
-    color:rgb(167, 137, 201);
+    color:rgb(61, 97, 145);
     text-align: center;
 }
 .my-4 {
-    border-color: rgb(167, 137, 201);
+    border-color: rgb(61, 97, 145);
 }
 
 .table {
@@ -23,10 +23,14 @@
     text-align: center;
     font-weight: 600;
     font-family: 'Roboto Condensed', sans-serif;
-    color: rgb(90, 89, 89);
-    padding-top: 30px;
+    color: #fff;
+    padding: 15px;
     font-size: 22px;
     margin: 0 auto 0 auto;
+}
+
+.d-flex {
+    background-color: rgb(125, 170, 228);
 }
 
 
