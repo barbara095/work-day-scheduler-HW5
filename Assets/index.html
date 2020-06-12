@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link>
-    <link rel="stylesheet" href=./style.css></link>
+    <link rel="stylesheet" href=./style.css>
+    </link>
 
     <title>Work Planner</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -17,10 +18,12 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-4">Welcome to your daily planner!</h1>
-        <p class="lead">Let's make your work life easier with this simple daily scheduler.</p>
+        <p class="lead">Let's make your life easier with this simple daily scheduler.</p>
         <div class="d-flex" id="current-date-time">
             <p class="lead" id="title-time">
-                <div class="font-weight-bold lead pl-1" id="dynamic-time"></div>
+            <div class="font-weight-bold lead pl-1" id="dynamic-time"></div>
+            <!-- container for Moment.js output -->
+            <div id="displayMoment"></div>
             </p>
         </div>
         <hr class="my-4">
@@ -102,18 +105,20 @@
     </table>
 
     <script type="text/javascript">
-
-    var time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-            console.log(time);
-            $("<empty-div>").text(time);
+        // Display current date with time
+        var timeEl = moment().format("dddd, MMMM Do YYYY | h:mmA");
+    
+        var timeDiv = document.querySelector("#displayMoment");
+        timeDiv.textContent = timeEl;
+      
 
     </script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
 
 
         $(document).ready(function () {
-            
+
 
 
 
@@ -128,7 +133,7 @@
 
 
         });
-    </script> -->
+    </script>
 
 
 </body>
