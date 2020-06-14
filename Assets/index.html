@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href=./style.css>
     </link>
 
@@ -21,7 +25,6 @@
         <h1 class="display-4">Welcome to your daily planner!</h1>
         <p class="lead">Let's make your life easier with this simple daily scheduler.</p>
         <div class="d-flex" id="current-date-time">
-            <div class="font-weight-bold" id="dynamic-time"></div>
             <!-- container for Moment.js output -->
             <div id="displayMoment"></div>
             </p>
@@ -33,115 +36,224 @@
         <p></p>
     </div>
 
-    <div class="container"></div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
+    <div class="container pb-5 mb-3">
+        <div class="table-responsive">
+            <table class="table">
+                <thead></thead>
                 <tr>
                     <div class="row">
-                        <th scope="col-3">Time</th>
+                        <th class="main-time">Time</th>
                         <div class="row">
-                            <th scope="col-6">First</th>
+                            <th class="main-task">Task</th>
                             <div class="row">
-                                <th scope="col-3">Last</th>
+                                <th class="main-save">Save</th>
                             </div>
                         </div>
                     </div>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">9:00am</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">10:00am</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-                <tr>
-                    <th scope="row">11:00am</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">12:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">1:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">2:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">3:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">4:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">5:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <th scope="row">6:00pm</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
+                </thead>
+                <tbody>
+                    <tr id="9am">
+                        <th class="time-col">9:00am</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-9am" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="10am">
+                        <th class="time-col">10:00am</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-10am" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="11am">
+                        <th class="time-col">11:00am</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-11am" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="12pm">
+                        <th class="time-col">12:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-12pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="1pm">
+                        <th class="time-col">1:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-1pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="2pm">
+                        <th class="time-col">2:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-2pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="3pm">
+                        <th class="time-col">3:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-3pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="4pm">
+                        <th class="time-col">4:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-4pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                    <tr id="5pm">
+                        <th class="time-col">5:00pm</th>
+                        <td class="input-text">
+                            <textarea class="input-area" id="text-time"></textarea>
+                        </td>
+                        <td id="save-5pm" class="align-middle save-button-cell">
+                            <div class="text-center">
+                                <button class="btn btn-outline-secondary save-button" type="button">
+                                    <i class="fas fa-save"></i>
+                                </button>
+                            </div>
+                    </tr>
+                </tbody>
+        </div>
     </div>
     </table>
 
     <footer class="footer text-center py-3 bg-dark sticky-footer">
         <div class="container" id="footer-container">
+
             <span class="text-muted">Copyright &copy; 2020 <a class="text-info">Barbara Potiriadis</a></span>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-        // Display current date with time
-        setInterval(function () {
-            var timeEl = moment().format("dddd, MMMM Do YYYY | h:mm:ss a");
-
-            var timeDiv = document.querySelector("#displayMoment");
-            timeDiv.textContent = timeEl;
-
-        }, 1000);
-
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
 
 
         $(document).ready(function () {
+            init();
+
+            var storedEvent;
+            var savedEvent;
+            var event;
+            var eventsArray = [];
+            var eventsObject = {};
+            var dateEl;
+            var dateObj;
+            var dateArr;
+
+            // Display current date with time
+            setInterval(function () {
+                var dateEl = moment().format("dddd, MMMM Do YYYY | h:mm:ss a");
+
+                var dateDiv = document.querySelector("#displayMoment");
+                dateDiv.textContent = dateEl;
+
+            }, 1000);
 
 
 
 
+            // function init() {
+            //     storedEvent = JSON.parse(localStorage.getItem("#text-time"));
+
+            //     if (storedEvent !== null) {
+            //         event = storedEvent;
+            //     }
+
+            // }
+
+
+            // function storeNewDate() {
+            //     var existingDate = JSON.parse(localStorage.getItem(dateEl));
+
+            //     if (existingDate !== null) {
+
+            //     }
+            // }
+
+            function changeColour() {
+                textInput = $(".text-time").map(function() {
+                    return this.id;
+
+            });
+
+            for (var i = 0; i < textInput.length; i++) {
+                var textInt = parseInt(textInput[i]);
+
+                if (dateEl === textInput) {
+                    
+                }
+            }
 
 
 
+            function saveTask() {
+                $(".save-button").on("click", function () {
+                    event.preventDefault();
 
 
+                });
 
+                function storeDate() {
+                    localStorage.setItem("event", JSON.stringify(eventsArray));
+                    console.log(savedEvent);
+                }
 
-
-
-
-        });
-    </script>
+                function clearEvents() {
+                    $(".input-area").val("");
+                    localStorage.clear();
+                }
+            };
+        }
+    });
+    // <script src="./script.js"></script>
 
 
 </body>

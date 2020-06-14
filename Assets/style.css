@@ -1,22 +1,11 @@
 /* Styling for jumbotron */
 .jumbotron {
     background-color: #fff;
-    color:rgb(61, 97, 145);
+    color:rgb(66, 66, 66);
     text-align: center;
 }
 .my-4 {
     border-color: rgb(61, 97, 145);
-}
-
-.table {
-    width: 80%;
-    margin: 0 auto 0 auto;
-}
-
-.table-bordered .table-bordered {
-    border-color: rgb(167, 137, 201);
-    border-style: solid;
-    border-width: 2px;
 }
 
 #displayMoment {
@@ -24,16 +13,48 @@
     font-weight: 600;
     font-family: 'Roboto Condensed', sans-serif;
     color: #fff;
-    padding: 12px;
-    font-size: 22px;
+    padding: 10px;
+    font-size: 28px;
     margin: 0 auto 0 auto;
 }
 
 .d-flex {
-    background-color: rgb(120, 178, 224);
-    width: 450px;
+    background-color: rgb(66, 155, 125);
     align-items: center;
     margin: auto;
 }
 
+.container {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto 0 auto;
+}
+
+.table {
+    border-color: rgb(83, 101, 117);
+    border-style: solid;
+    border-width: inherit;
+}
+
+.time-col {
+    width: 10%;
+    background-color: rgb(211, 174, 189);
+    color: #fff;
+}
+
+.task-col {
+    width: 80%;
+}
+
+.save-col {
+    width: 10%;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.input-area {
+    width: 100%;
+}
 
