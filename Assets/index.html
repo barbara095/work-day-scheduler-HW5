@@ -177,7 +177,7 @@
 
 
         $(document).ready(function () {
-            init();
+        
 
             var storedEvent;
             var savedEvent;
@@ -218,41 +218,28 @@
             //     }
             // }
 
-            function changeColour() {
-                textInput = $(".text-time").map(function() {
-                    return this.id;
-
-            });
-
-            for (var i = 0; i < textInput.length; i++) {
-                var textInt = parseInt(textInput[i]);
-
-                if (dateEl === textInput) {
-                    
-                }
-            }
-
-
-
             function saveTask() {
                 $(".save-button").on("click", function () {
                     event.preventDefault();
 
-
+                   
                 });
 
-                function storeDate() {
-                    localStorage.setItem("event", JSON.stringify(eventsArray));
-                    console.log(savedEvent);
-                }
+            function storeDate() {
+                localStorage.setItem("event", JSON.stringify(eventsArray));
+                console.log(savedEvent);
+            }
 
-                function clearEvents() {
-                    $(".input-area").val("");
-                    localStorage.clear();
-                }
-            };
-        }
-    });
+            function clearEvents() {
+                $(".input-area").val("");
+                localStorage.clear();
+            }
+
+            }
+
+
+        });
+
     // <script src="./script.js"></script>
 
 
