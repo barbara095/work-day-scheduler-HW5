@@ -177,7 +177,7 @@
 
 
         $(document).ready(function () {
-        
+
 
             var storedEvent;
             var savedEvent;
@@ -186,8 +186,20 @@
             var eventsObject = {};
             var dateEl;
             var dateObj;
-            var dateArr;
+            var dateArray;
+            var timeArray; 
 
+            var hour;
+
+            function init() {
+                setInterval();
+                storeCurrentDate();
+                storeNewDate();
+                changeColour();
+                saveTask();
+                storeDate();
+                clearEvents();
+            }
             // Display current date with time
             setInterval(function () {
                 var dateEl = moment().format("dddd, MMMM Do YYYY | h:mm:ss a");
@@ -198,42 +210,61 @@
             }, 1000);
 
 
+            function storeCurrentDate() {
+                storedDate = JSON.parse(localStorage.getItem(date));
 
+                if (storedDate === null) {
+                    dateEl = storedDate;
+                    dateObj['date'] = dateEl;
 
-            // function init() {
-            //     storedEvent = JSON.parse(localStorage.getItem("#text-time"));
+                    dateArray.push(dateObj);
+                    localStorage.setItem(dateEl, JSON.stringify(dateArray));
+                }
 
-            //     if (storedEvent !== null) {
-            //         event = storedEvent;
-            //     }
+            }
+            
+            function storeNewDate() {
+                var existingDate = JSON.parse(localStorage.getItem(dateEl));
 
-            // }
+                if (existingDate !== null) {
+                    timeArray = existingDate;
+                }
+            }
 
+            function changeColour() {
+                var currentHour = parseInt(moment().format('h'));
+                eventsObject = $("#text-time");
+                
+                for (var i = 0; i < eventsObject.length; i++) {
+                    var eventsObject = parseInt(eventsObject[i]);
+                }
 
-            // function storeNewDate() {
-            //     var existingDate = JSON.parse(localStorage.getItem(dateEl));
-
-            //     if (existingDate !== null) {
-
-            //     }
-            // }
-
+                if (currentHour === eventsObject) {
+                    $('#' + timeIDs[i]).find('input-area').css('background-color', '#3cb371');
+                } else if (currentHour < eventsObject) {
+                    $(".input-area").css('background-color', '#ffdab9');
+                } else if (currentHour > eventsObject) {
+                    $(".input-area").css('background-color', 'lightgray');
+                }
+    
+            }
+            
             function saveTask() {
                 $(".save-button").on("click", function () {
                     event.preventDefault();
 
-                   
+
                 });
 
-            function storeDate() {
-                localStorage.setItem("event", JSON.stringify(eventsArray));
-                console.log(savedEvent);
-            }
+                function storeDate() {
+                    localStorage.setItem("event", JSON.stringify(eventsArray));
+                    console.log(savedEvent);
+                }
 
-            function clearEvents() {
-                $(".input-area").val("");
-                localStorage.clear();
-            }
+                function clearEvents() {
+                    $(".input-area").val("");
+                    localStorage.clear();
+                }
 
             }
 
