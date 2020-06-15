@@ -1,6 +1,7 @@
 
 
 $(document).ready(function () {
+
     var storedEvent;
     var savedEvent;
     var event;
@@ -23,6 +24,7 @@ $(document).ready(function () {
         storeDate();
         clearEvents();
     }
+
     // Display current date with time
     setInterval(function () {
         var dateEl = moment().format("dddd, MMMM Do YYYY | h:mm:ss a");
