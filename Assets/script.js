@@ -81,21 +81,18 @@ $(document).ready(function () {
             eventsObject = {};
 
 
-
-
-
         });
 
-        function storeDate() {
-            localStorage.setItem("event", JSON.stringify(eventsArray));
-            console.log(savedEvent);
-        }
+    }
 
-        function clearEvents() {
-            $(".input-area").val("");
-            localStorage.clear();
-        }
+    function storeDate() {
+        localStorage.setItem("event", JSON.stringify(eventsArray));
+        console.log(savedEvent);
+    }
 
+    function clearEvents() {
+        $(".input-area").val("");
+        localStorage.clear();
     }
 
 
