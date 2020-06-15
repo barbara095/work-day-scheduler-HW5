@@ -1,12 +1,11 @@
 # work-day-scheduler-HW5
 
-// Colour code each time block for the day based on whether it is in the past, present or future
-<!--  -->
+This project contains a html, javascript and css worksheet. 
 
-// When I click on a timeblock, I can enter an event 
-
-// When I click 'save' then the text for that timeblock is saved in local storage
-
-// When i refresh the page, then the saved events are there
+// It consists of the live date and time, displayed at the top of the page. 
+// The planner is organised such that it shows each timeblock with a text box that allows you to write a task/event. 
+// When you click the save button, then the event for that time block is saved. 
+// Each block is colour coded based on whether an event occurred in the past, present or future. 
+// When you refresh the page, the saved events are shown. 
 
 
