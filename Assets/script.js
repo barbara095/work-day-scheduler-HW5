@@ -93,8 +93,12 @@ $(document).ready(function () {
     }
 
     function clearEvents() {
-        $(".input-area").val("");
-        localStorage.clear();
+        $("#clear-button").on("click", function() {
+            // eventsObject = {};
+            $(".input-area").val("");
+            localStorage.clear();
+        });
+        
     }
 
 
