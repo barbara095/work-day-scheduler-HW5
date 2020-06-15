@@ -186,8 +186,9 @@
             var eventsObject = {};
             var dateEl;
             var dateObj;
+            var storedDate;
             var dateArray;
-            var timeArray; 
+            var timeArray;
 
             var hour;
 
@@ -222,7 +223,7 @@
                 }
 
             }
-            
+
             function storeNewDate() {
                 var existingDate = JSON.parse(localStorage.getItem(dateEl));
 
@@ -233,25 +234,32 @@
 
             function changeColour() {
                 var currentHour = parseInt(moment().format('h'));
-                eventsObject = $("#text-time");
-                
-                for (var i = 0; i < eventsObject.length; i++) {
-                    var eventsObject = parseInt(eventsObject[i]);
+                var timeEl = $("#tr[id")
+                    .map(function () {
+                        return this.id;
+                    })
+                    .get()
+
+                for (var i = 0; i < timeEl.length; i++) {
+                    var timeElInt = parseInt(timeEl[i]);
                 }
 
-                if (currentHour === eventsObject) {
-                    $('#' + timeIDs[i]).find('input-area').css('background-color', '#3cb371');
-                } else if (currentHour < eventsObject) {
+                if (timeElInt === currentHour) {
+                    $('#' + timeElInt[i]).find('input-area').css('background-color', '#3cb371');
+                } else if (timeElInt < eventsObject) {
                     $(".input-area").css('background-color', '#ffdab9');
-                } else if (currentHour > eventsObject) {
+                } else if (timeElInt > eventsObject) {
                     $(".input-area").css('background-color', 'lightgray');
                 }
-    
+
             }
-            
+
             function saveTask() {
-                $(".save-button").on("click", function () {
-                    event.preventDefault();
+                $(".save-button").on("click", function(event) {
+                    event.preventDefault(event);
+                    savedEvent = event.target;
+
+                    
 
 
                 });
