@@ -81,12 +81,10 @@ $(document).ready(function () {
             event.preventDefault(event);
             savedEvent = event.target;
             eventsObject = {};
-
-
         });
 
     }
-
+    
     function storeDate() {
         localStorage.setItem("event", JSON.stringify(eventsArray));
         console.log(savedEvent);
